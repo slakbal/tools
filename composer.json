@@ -1,0 +1,58 @@
+{
+    "name": "slakbal/tools",
+    "description": "Simple Common Tools",
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Slakbal",
+            "email": "test@slakbal.com",
+            "homepage": "https://slakbal.com"
+        }
+    ],
+    "homepage": "https://github.com/slakbal/tools",
+    "keywords": [
+        "Slakbal",
+        "Tools",
+    ],
+    "require": {
+        "laravel/framework": "^8.0|^9.0|^10.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "orchestra/testbench": "^6.0",
+        "pestphp/pest": "^1.0",
+        "pestphp/pest-plugin-laravel": "^1.0",
+        "pestphp/pest-plugin-livewire": "^1.0",
+        "orchestra/canvas": "^6.1",
+        "nunomaduro/collision": "^5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Slakbal\\Tools\\": "src/"
+        },
+        "files": [
+            "src/Helpers/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Slakbal\\Tools\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Slakbal\\Tools\\ToolsServiceProvider"
+            ],
+            "aliases": {
+                "Tools": "Slakbal\\Tools\\Facades\\Tools"
+            }
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
