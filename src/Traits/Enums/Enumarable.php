@@ -20,7 +20,7 @@ trait Enumarable
             return self::from(Str::remove('.0', $value));
         }
 
-        return self::from(str($value)->trim()->replace('/', '')->upper());
+        return self::from(str($value)->trim()->replace('/', ''));
     }
 
     //get the transalated names for the keys
